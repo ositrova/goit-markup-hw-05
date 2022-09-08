@@ -23,6 +23,8 @@
   /* Others */
   --items: 3;
   --indent: 30px;
+
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 /**
   |============================
@@ -53,6 +55,7 @@ img {
 .link {
   text-decoration: none;
   color: currentColor;
+  transition: color var(--animation);
 }
 
 .container {
@@ -169,6 +172,7 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--light-txt-cl);
+  transition: color var(--animation);
 }
 
 .link:hover,
@@ -199,6 +203,7 @@ border-radius: 2px;
 .contacts-icon {
   fill: currentColor;
   stroke: var(--light-txt-cl);
+  transition: color var(--animation);
 }
 .nav-contact .contacts-icon:hover,
 .nav-contact .contacts-icon:focus {
@@ -262,6 +267,7 @@ border-radius: 2px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background-color var(--animation);
 }
 
 /**
@@ -424,6 +430,7 @@ background-color: rgba(47, 48, 58, 0.8);
   color: var(--bg-grip-cl);
   background-color: var(--second-txt-cl);
   border-radius: 50%;
+  transition: color var(--animation), background-color var(--animation);
 }
 
 .socials-link:hover,
@@ -468,6 +475,7 @@ background-color: rgba(47, 48, 58, 0.8);
   width: 100%;
   height: 100%;
   color: var(--bg-grip-cl);
+  transition: color var(--animation), border var(--animation);
 }
 
 .client-link:hover,
@@ -558,6 +566,7 @@ background-color: rgba(47, 48, 58, 0.8);
 
   color: var(--second-txt-cl);
   background-color: var(--footer-txt-second);
+  transition: background-color var(--animation);
 }
 
 .footer-socials-link:hover,
@@ -597,12 +606,13 @@ background-color: rgba(47, 48, 58, 0.8);
   border: none;
   padding: 6px 22px;
   border-radius: 4px;
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
 .partfolio-btn:hover,
 .partfolio-btn:focus {
   color: var(--second-txt-cl);
-  background: var(--accent-txt-cl);
+  background-color: var(--accent-txt-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -612,6 +622,7 @@ background-color: rgba(47, 48, 58, 0.8);
 .partfolio-work {
   display: flex;
   flex-wrap: wrap;
+  transition: box-shadow var(--animation);
 }
 
 /* .partfolio-work-img { 
@@ -635,6 +646,9 @@ background-color: rgba(47, 48, 58, 0.8);
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--light-txt-cl);
+}
+.partfolio-box-link {
+  transition: box-shadow var(--animation);
 }
 
 .partfolio-box-link:focus {
@@ -660,7 +674,7 @@ background-color: rgba(47, 48, 58, 0.8);
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transition: 250ms, cubic-bezier(0.4, 0, 0.2, 1), opacity 1000ms;
+  transition: 
 }
 .backdrop.is-hidden {
   opacity: 0;
